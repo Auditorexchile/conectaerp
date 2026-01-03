@@ -1,34 +1,44 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Dependencies
+/vendor/
+/node_modules/
 
-# testing
-/coverage
+# Configuration
+/config/database.php
+/config/.env
 
-# next.js
-/.next/
-/out/
+# Logs
+/logs/*.log
+!/logs/.gitkeep
 
-# production
-/build
+# Cache
+/cache/*
+!/cache/.gitkeep
 
-# misc
+# Uploads
+/uploads/*
+!/uploads/.gitkeep
+
+# Temp
+/tmp/*
+!/tmp/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Certificates
 *.pem
+*.key
+*.crt
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-.env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Backups
+*.bak
+*.backup
+*.sql.gz
