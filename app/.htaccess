@@ -1,0 +1,8 @@
+# Bloquear acceso directo a archivos del core
+Order Deny,Allow
+Deny from all
+
+# Permitir solo archivos específicos si es necesario
+# <Files "archivo_permitido.php">
+#     Allow from all
+# </Files>

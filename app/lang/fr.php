@@ -1,0 +1,23 @@
+<?php
+return [
+    'app_name' => 'Conecta ERP',
+    'welcome' => 'Bienvenue',
+    'dashboard' => 'Tableau de bord',
+    'logout' => 'Déconnexion',
+    'save' => 'Enregistrer',
+    'cancel' => 'Annuler',
+    'delete' => 'Supprimer',
+    'edit' => 'Modifier',
+    'create' => 'Créer',
+    'search' => 'Rechercher',
+    'companies' => 'Entreprises',
+    'users' => 'Utilisateurs',
+    'clients' => 'Clients',
+    'suppliers' => 'Fournisseurs',
+    'products' => 'Produits',
+    'inventory' => 'Inventaire',
+    'sales' => 'Ventes',
+    'purchases' => 'Achats',
+    'accounting' => 'Comptabilité',
+    'configuration' => 'Configuration',
+];
