@@ -195,17 +195,170 @@ $currentSub = $_GET['sub'] ?? '';
                 <span class="nav-text">CRM</span>
             </a>
 
-            <!-- Proyectos -->
-            <a href="/app/router.php?module=proyectos" class="nav-item <?= $currentModule === 'proyectos' ? 'active' : '' ?>">
-                <span class="nav-icon">📁</span>
-                <span class="nav-text">Proyectos</span>
-            </a>
+            <!-- PROYECTOS -->
+            <div class="nav-section <?= $currentModule === 'proyectos' ? 'active' : '' ?>">
+                <div class="nav-section-title">
+                    <span class="nav-icon">📁</span>
+                    <span class="nav-text">Proyectos</span>
+                    <span class="nav-arrow">›</span>
+                </div>
+                <div class="nav-submenu">
+                    <a href="/app/router.php?module=proyectos&sub=proyectos" class="nav-subitem <?= $currentModule === 'proyectos' && $currentSub === 'proyectos' ? 'active' : '' ?>">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Proyectos</span>
+                    </a>
+                    <a href="/app/router.php?module=proyectos&sub=tareas" class="nav-subitem <?= $currentModule === 'proyectos' && $currentSub === 'tareas' ? 'active' : '' ?>">
+                        <span class="nav-icon">✓</span>
+                        <span class="nav-text">Tareas</span>
+                    </a>
+                    <a href="/app/router.php?module=proyectos&sub=hitos" class="nav-subitem <?= $currentModule === 'proyectos' && $currentSub === 'hitos' ? 'active' : '' ?>">
+                        <span class="nav-icon">🎯</span>
+                        <span class="nav-text">Hitos</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CALIDAD -->
+            <div class="nav-section <?= $currentModule === 'calidad' ? 'active' : '' ?>">
+                <div class="nav-section-title">
+                    <span class="nav-icon">🏆</span>
+                    <span class="nav-text">Calidad</span>
+                    <span class="nav-arrow">›</span>
+                </div>
+                <div class="nav-submenu">
+                    <a href="/app/router.php?module=calidad&sub=control" class="nav-subitem <?= $currentModule === 'calidad' && $currentSub === 'control' ? 'active' : '' ?>">
+                        <span class="nav-icon">✓</span>
+                        <span class="nav-text">Control de Calidad</span>
+                    </a>
+                    <a href="/app/router.php?module=calidad&sub=no_conformidades" class="nav-subitem <?= $currentModule === 'calidad' && $currentSub === 'no_conformidades' ? 'active' : '' ?>">
+                        <span class="nav-icon">⚠️</span>
+                        <span class="nav-text">No Conformidades</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MANTENIMIENTO -->
+            <div class="nav-section <?= $currentModule === 'mantenimiento' ? 'active' : '' ?>">
+                <div class="nav-section-title">
+                    <span class="nav-icon">🔧</span>
+                    <span class="nav-text">Mantenimiento</span>
+                    <span class="nav-arrow">›</span>
+                </div>
+                <div class="nav-submenu">
+                    <a href="/app/router.php?module=mantenimiento&sub=ordenes" class="nav-subitem <?= $currentModule === 'mantenimiento' && $currentSub === 'ordenes' ? 'active' : '' ?>">
+                        <span class="nav-icon">📋</span>
+                        <span class="nav-text">Órdenes de Trabajo</span>
+                    </a>
+                    <a href="/app/router.php?module=mantenimiento&sub=preventivo" class="nav-subitem <?= $currentModule === 'mantenimiento' && $currentSub === 'preventivo' ? 'active' : '' ?>">
+                        <span class="nav-icon">🛠️</span>
+                        <span class="nav-text">Preventivos</span>
+                    </a>
+                </div>
+            </div>
 
             <!-- BI - Business Intelligence -->
-            <a href="/app/router.php?module=bi" class="nav-item <?= $currentModule === 'bi' ? 'active' : '' ?>">
-                <span class="nav-icon">📈</span>
-                <span class="nav-text">BI / Reportes</span>
-            </a>
+            <div class="nav-section <?= $currentModule === 'bi' ? 'active' : '' ?>">
+                <div class="nav-section-title">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">BI / Reportes</span>
+                    <span class="nav-arrow">›</span>
+                </div>
+                <div class="nav-submenu">
+                    <a href="/app/router.php?module=bi&sub=dashboards" class="nav-subitem <?= $currentModule === 'bi' && $currentSub === 'dashboards' ? 'active' : '' ?>">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboards</span>
+                    </a>
+                    <a href="/app/router.php?module=bi&sub=kpis" class="nav-subitem <?= $currentModule === 'bi' && $currentSub === 'kpis' ? 'active' : '' ?>">
+                        <span class="nav-icon">📌</span>
+                        <span class="nav-text">KPIs</span>
+                    </a>
+                    <a href="/app/router.php?module=bi&sub=metricas" class="nav-subitem <?= $currentModule === 'bi' && $currentSub === 'metricas' ? 'active' : '' ?>">
+                        <span class="nav-icon">📉</span>
+                        <span class="nav-text">Métricas</span>
+                    </a>
+                    <a href="/app/router.php?module=bi&sub=reportes_personalizados" class="nav-subitem <?= $currentModule === 'bi' && $currentSub === 'reportes_personalizados' ? 'active' : '' ?>">
+                        <span class="nav-icon">📄</span>
+                        <span class="nav-text">Reportes Personalizados</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ECOMMERCE -->
+            <div class="nav-section <?= $currentModule === 'ecommerce' ? 'active' : '' ?>">
+                <div class="nav-section-title">
+                    <span class="nav-icon">🛍️</span>
+                    <span class="nav-text">Ecommerce</span>
+                    <span class="nav-arrow">›</span>
+                </div>
+                <div class="nav-submenu">
+                    <a href="/app/router.php?module=ecommerce&sub=tienda" class="nav-subitem <?= $currentModule === 'ecommerce' && $currentSub === 'tienda' ? 'active' : '' ?>">
+                        <span class="nav-icon">🏪</span>
+                        <span class="nav-text">Mi Tienda</span>
+                    </a>
+                    <a href="/app/router.php?module=ecommerce&sub=pedidos" class="nav-subitem <?= $currentModule === 'ecommerce' && $currentSub === 'pedidos' ? 'active' : '' ?>">
+                        <span class="nav-icon">📦</span>
+                        <span class="nav-text">Pedidos Web</span>
+                    </a>
+                    <a href="/app/router.php?module=ecommerce&sub=carritos" class="nav-subitem <?= $currentModule === 'ecommerce' && $currentSub === 'carritos' ? 'active' : '' ?>">
+                        <span class="nav-icon">🛒</span>
+                        <span class="nav-text">Carritos Abandonados</span>
+                    </a>
+                    <a href="/app/router.php?module=ecommerce&sub=metodos_pago" class="nav-subitem <?= $currentModule === 'ecommerce' && $currentSub === 'metodos_pago' ? 'active' : '' ?>">
+                        <span class="nav-icon">💳</span>
+                        <span class="nav-text">Métodos de Pago</span>
+                    </a>
+                    <a href="/app/router.php?module=ecommerce&sub=envios" class="nav-subitem <?= $currentModule === 'ecommerce' && $currentSub === 'envios' ? 'active' : '' ?>">
+                        <span class="nav-icon">🚚</span>
+                        <span class="nav-text">Envíos</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RELOJ CONTROL -->
+            <div class="nav-section <?= $currentModule === 'reloj' ? 'active' : '' ?>">
+                <div class="nav-section-title">
+                    <span class="nav-icon">⏰</span>
+                    <span class="nav-text">Reloj Control</span>
+                    <span class="nav-arrow">›</span>
+                </div>
+                <div class="nav-submenu">
+                    <a href="/app/router.php?module=reloj&sub=marcajes" class="nav-subitem <?= $currentModule === 'reloj' && $currentSub === 'marcajes' ? 'active' : '' ?>">
+                        <span class="nav-icon">👆</span>
+                        <span class="nav-text">Marcajes</span>
+                    </a>
+                    <a href="/app/router.php?module=reloj&sub=dispositivos" class="nav-subitem <?= $currentModule === 'reloj' && $currentSub === 'dispositivos' ? 'active' : '' ?>">
+                        <span class="nav-icon">📱</span>
+                        <span class="nav-text">Dispositivos</span>
+                    </a>
+                    <a href="/app/router.php?module=reloj&sub=turnos" class="nav-subitem <?= $currentModule === 'reloj' && $currentSub === 'turnos' ? 'active' : '' ?>">
+                        <span class="nav-icon">📅</span>
+                        <span class="nav-text">Turnos</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- API -->
+            <div class="nav-section <?= $currentModule === 'api' ? 'active' : '' ?>">
+                <div class="nav-section-title">
+                    <span class="nav-icon">🔌</span>
+                    <span class="nav-text">API / Webhooks</span>
+                    <span class="nav-arrow">›</span>
+                </div>
+                <div class="nav-submenu">
+                    <a href="/app/router.php?module=api&sub=tokens" class="nav-subitem <?= $currentModule === 'api' && $currentSub === 'tokens' ? 'active' : '' ?>">
+                        <span class="nav-icon">🔑</span>
+                        <span class="nav-text">Tokens API</span>
+                    </a>
+                    <a href="/app/router.php?module=api&sub=webhooks" class="nav-subitem <?= $currentModule === 'api' && $currentSub === 'webhooks' ? 'active' : '' ?>">
+                        <span class="nav-icon">🪝</span>
+                        <span class="nav-text">Webhooks</span>
+                    </a>
+                    <a href="/app/router.php?module=api&sub=documentacion" class="nav-subitem <?= $currentModule === 'api' && $currentSub === 'documentacion' ? 'active' : '' ?>">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Documentación</span>
+                    </a>
+                </div>
+            </div>
 
             <!-- Configuración -->
             <div class="nav-section <?= $currentModule === 'config' ? 'active' : '' ?>">
@@ -216,18 +369,31 @@ $currentSub = $_GET['sub'] ?? '';
                 </div>
                 <div class="nav-submenu">
                     <a href="/app/router.php?module=config&sub=empresa" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'empresa' ? 'active' : '' ?>">
+                        <span class="nav-icon">🏢</span>
                         <span class="nav-text">Empresa</span>
                     </a>
-                    <a href="/app/router.php?module=config&sub=usuarios" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'usuarios' ? 'active' : '' ?>">
-                        <span class="nav-text">Usuarios</span>
-                    </a>
                     <a href="/app/router.php?module=config&sub=sucursales" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'sucursales' ? 'active' : '' ?>">
+                        <span class="nav-icon">🏪</span>
                         <span class="nav-text">Sucursales</span>
                     </a>
+                    <a href="/app/router.php?module=config&sub=usuarios" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'usuarios' ? 'active' : '' ?>">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Usuarios</span>
+                    </a>
+                    <a href="/app/router.php?module=config&sub=monedas" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'monedas' ? 'active' : '' ?>">
+                        <span class="nav-icon">💱</span>
+                        <span class="nav-text">Monedas</span>
+                    </a>
                     <a href="/app/router.php?module=config&sub=tipos_cambio" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'tipos_cambio' ? 'active' : '' ?>">
+                        <span class="nav-icon">💹</span>
                         <span class="nav-text">Tipos de Cambio</span>
                     </a>
+                    <a href="/app/router.php?module=config&sub=impuestos" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'impuestos' ? 'active' : '' ?>">
+                        <span class="nav-icon">💼</span>
+                        <span class="nav-text">Impuestos</span>
+                    </a>
                     <a href="/app/router.php?module=config&sub=plan" class="nav-subitem <?= $currentModule === 'config' && $currentSub === 'plan' ? 'active' : '' ?>">
+                        <span class="nav-icon">💎</span>
                         <span class="nav-text">Plan y Facturación</span>
                     </a>
                 </div>
