@@ -1,0 +1,223 @@
+/* ========================================
+   CONECTA ERP - DARK MODE PARA AUTH
+   ======================================== */
+
+/* Variables para modo oscuro en páginas de auth */
+body.dark-mode.auth-page {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+body.dark-mode .auth-header {
+    background: rgba(31, 41, 55, 0.95);
+    border-bottom-color: #374151;
+}
+
+body.dark-mode .logo {
+    color: #f9fafb;
+}
+
+body.dark-mode .auth-main {
+    background: transparent;
+}
+
+body.dark-mode .auth-card {
+    background: #1f2937;
+    border: 1px solid #374151;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .auth-card-header h1 {
+    color: #f9fafb;
+}
+
+body.dark-mode .auth-card-header p {
+    color: #d1d5db;
+}
+
+body.dark-mode .form-group label {
+    color: #f9fafb;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #3b82f6;
+    background: #4b5563;
+}
+
+body.dark-mode .form-hint {
+    color: #9ca3af;
+}
+
+body.dark-mode .alert {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+body.dark-mode .alert-error {
+    background: rgba(239, 68, 68, 0.1);
+    border-left-color: #ef4444;
+    color: #fca5a5;
+}
+
+body.dark-mode .alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    border-left-color: #10b981;
+    color: #6ee7b7;
+}
+
+body.dark-mode .auth-footer {
+    background: rgba(31, 41, 55, 0.95);
+    border-top-color: #374151;
+    color: #d1d5db;
+}
+
+body.dark-mode .auth-footer a {
+    color: #d1d5db;
+}
+
+body.dark-mode .auth-footer a:hover {
+    color: #3b82f6;
+}
+
+/* Wizard de registro */
+body.dark-mode .wizard-progress {
+    background: #374151;
+}
+
+body.dark-mode .wizard-step {
+    color: #9ca3af;
+}
+
+body.dark-mode .wizard-step.active {
+    color: #3b82f6;
+}
+
+body.dark-mode .wizard-step.completed {
+    color: #10b981;
+}
+
+body.dark-mode .wizard-step-number {
+    background: #4b5563;
+    border-color: #6b7280;
+    color: #d1d5db;
+}
+
+body.dark-mode .wizard-step.active .wizard-step-number {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: #fff;
+}
+
+body.dark-mode .wizard-step.completed .wizard-step-number {
+    background: #10b981;
+    border-color: #10b981;
+    color: #fff;
+}
+
+/* Password strength */
+body.dark-mode .password-strength {
+    background: #374151;
+}
+
+body.dark-mode .strength-bar {
+    background: #4b5563;
+}
+
+/* Plan cards */
+body.dark-mode .plan-card {
+    background: #374151;
+    border-color: #4b5563;
+}
+
+body.dark-mode .plan-card.featured {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+body.dark-mode .plan-name {
+    color: #f9fafb;
+}
+
+body.dark-mode .plan-price {
+    color: #f9fafb;
+}
+
+body.dark-mode .plan-features li {
+    color: #d1d5db;
+}
+
+/* Botón toggle theme para auth */
+.auth-theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.auth-theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .auth-theme-toggle {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: #4b5563;
+}
+
+/* Links */
+body.dark-mode .auth-card-footer a {
+    color: #3b82f6;
+}
+
+body.dark-mode .auth-card-footer a:hover {
+    color: #60a5fa;
+}
+
+body.dark-mode .card-link {
+    color: #3b82f6;
+}
+
+/* Modals */
+body.dark-mode .modal {
+    background: rgba(17, 24, 39, 0.95);
+}
+
+body.dark-mode .modal-content {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-mode .modal-header {
+    border-bottom-color: #374151;
+}
+
+body.dark-mode .modal-title {
+    color: #f9fafb;
+}
+
+body.dark-mode .modal-body {
+    color: #d1d5db;
+}

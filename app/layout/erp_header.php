@@ -87,6 +87,11 @@ function timeAgo($datetime) {
             <span class="search-icon">🔍</span>
         </div>
 
+        <!-- Botón Cambiar Tema (Claro/Oscuro) -->
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Cambiar tema">
+            <span id="themeIcon">🌙</span>
+        </button>
+
         <!-- Selector de idioma -->
         <div class="header-language" id="languageSelector">
             <button class="language-btn" onclick="toggleLanguageMenu()">
@@ -255,4 +260,36 @@ document.addEventListener('click', function(event) {
 if (localStorage.getItem('sidebarCollapsed') === 'true') {
     document.body.classList.add('sidebar-collapsed');
 }
+
+// ===== TOGGLE DARK MODE =====
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('themeIcon');
+
+    if (body.classList.contains('dark-mode')) {
+        // Cambiar a modo claro
+        body.classList.remove('dark-mode');
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+    } else {
+        // Cambiar a modo oscuro
+        body.classList.add('dark-mode');
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Restaurar tema guardado al cargar la página
+(function() {
+    const savedTheme = localStorage.getItem('theme');
+    const themeIcon = document.getElementById('themeIcon');
+
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (themeIcon) themeIcon.textContent = '☀️';
+    } else {
+        document.body.classList.remove('dark-mode');
+        if (themeIcon) themeIcon.textContent = '🌙';
+    }
+})();
 </script>
